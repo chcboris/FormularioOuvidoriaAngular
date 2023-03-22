@@ -10,7 +10,7 @@ Configurando o bootstrap, compartilhando o boot strap por toda aplicação atrav
 Configurando o  font-awesome -> compartilhando o boot strap por toda aplicação através do arquivo angular.json através do atributo style -> “./node_modules/font-awesome/CSS/font-awesome.CSS”
 instalando o MATERIAL -> ng add @angular/material@14
 No modulo administrativo, incluir no vetor IMPORTS o modulo do Material desejado e import
-incluir o componente na pagina desejada
+incluir a tag do componente na pagina principal
 
 ############################################################################################
 
@@ -98,3 +98,16 @@ incluir o componente na pagina desejada
 ________________________________________________________________
 
 ng g c administrativo/reclamacao   
+
+
+Christian Carlos Ramalho Moreira <christian.moreira@tre-rj.jus.br>
+	
+seg., 17 de out. de 2022, 17:15
+	
+para Avelino
+Boa tarde!
+
+No mês de setembro/22 fiquei devendo 03:24h, vou compensar no mês de outubro, certamente usando os plantões.
+
+Obrigado
+
