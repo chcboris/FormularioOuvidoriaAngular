@@ -5,12 +5,12 @@ criar o módulo administrativo -> ng generate module administrativo --routing
 criar o componente principal do módulo -> ng g c administrativo
 exportar componente administrativo, no modulo do componente e dentro NgModule, vamos colocar o atributo exports.
 no app.module, que é o principal módulo do nosso projeto, na raiz, no app.module.ts, podemos importar o  modulo administrativo.
-
-
 instalando boot strap  e font-awesome -> npm i bootstrap font-awesome
 Configurando o bootstrap, compartilhando o boot strap por toda aplicação através do arquivo angular.json através do atributo style -> “./node_modules/bootstrap/dist/CSS/bootstrap.min.CSS”
 Configurando o  font-awesome -> compartilhando o boot strap por toda aplicação através do arquivo angular.json através do atributo style -> “./node_modules/font-awesome/CSS/font-awesome.CSS”
-
+instalando o MATERIAL -> ng add @angular/material@14
+No modulo administrativo, incluir no vetor IMPORTS o modulo do Material desejado e import
+incluir o componente na pagina desejada
 
 ############################################################################################
 
@@ -94,25 +94,6 @@ Configurando o  font-awesome -> compartilhando o boot strap por toda aplicação
 
 [08:34] Ele ainda não está com funcionalidade, só criamos o template. Agora nós vamos começar a adicionar a funcionalidade de login. Vamos nessa?
 
-
-#################################################################################
-
-
-[00:00] Iremos utilizar o bootstrap com biblioteca CSS no nosso projeto e o font- awesome’ com biblioteca de ícones no nosso projeto. Para instalarmos essas bibliotecas, vamos agora na nossa linha de comando, na pasta que nós acabamos de criar do nosso projeto Angular cd gatitobook\ > Tecla Enter, o projeto que o Angular criou.
-
-[00:23] Vamos instalar as nossas bibliotecas utilizando o comando ‘npm i bootstrap font-awesome’ e tecla “Enter”. Vamos instalar essas duas bibliotecas e agora. Utilizamos essas bibliotecas no nosso projeto, temos que incorporar o CSS ao CSS global do Angular.
-
-[00:57] No Gatito Book, eu vou abrir o meu VS Studio Code utilizando o comando code . e a tecla “Enter”. Ele já vai abrir a pasta.
-
-[01:07] E o Angular empacota o CSS de cada componente no próprio componente, os CSS ficam isolados, porém, no caso do bootstrap, eu quero usar as classes do bootstrap em todos os componentes. Como eu faço isso? No meu projeto, na raiz, no arquivo “angular.json”.
-
-[01:34] Nesse arquivo, nós temos todas as configurações globais do meu projeto Angular, eu vou até o atributo style porque é um JSON comum. Eu vou adicionar os CSS, tanto do font-awesome quanto do bootstrap, para a nossa aplicação. Vamos no style, é uma rede, é um atributo tipo array. Vamos colocar ,.
-
-[02:07] E vou adicionar o caminho de onde estão os CSS do nosso projeto. No caso estamos na node mod porque acabamos de instalar as bibliotecas, vou colocar “./node_modules/bootstrap/dist/CSS/bootstrap.min.CSS” - é a versão minificada do arquivo que vem junto com a biblioteca.
-
-[02:49] E também vamos adicionar o do font-awesome - “./node_modules/font-awesome/CSS/font-awesome.CSS”.
-
-[03:14] Agora o nosso projeto está todo configurado e podemos começar o desenvolvimento da nossa primeira tela. Vamos lá?
 
 ________________________________________________________________
 
