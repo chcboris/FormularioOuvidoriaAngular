@@ -1,19 +1,31 @@
 # Formulario - Criar um projeto [ng new FormularioOuvidoria]
 Instalar módulos [npm install]
 testar aplicação [npm start]
-criar o módulo administrativo -> ng generate module administrativo --routing
-criar o componente principal do módulo -> ng g c administrativo
-exportar componente administrativo, no modulo do componente e dentro NgModule, vamos colocar o atributo exports.
-no app.module, que é o principal módulo do nosso projeto, na raiz, no app.module.ts, podemos importar o  modulo administrativo.
 instalando boot strap  e font-awesome -> npm i bootstrap font-awesome
 Configurando o bootstrap, compartilhando o boot strap por toda aplicação através do arquivo angular.json através do atributo style -> “./node_modules/bootstrap/dist/CSS/bootstrap.min.CSS”
 Configurando o  font-awesome -> compartilhando o boot strap por toda aplicação através do arquivo angular.json através do atributo style -> “./node_modules/font-awesome/CSS/font-awesome.CSS”
 instalando o MATERIAL -> ng add @angular/material@14
-No modulo administrativo, incluir no vetor IMPORTS o modulo do Material desejado e import
-incluir a tag do componente na pagina principal
+No modulo administrativo, incluir no vetor IMPORTS o modulo do componente Material desejado e importar no arquivo onde vai ser implementado
+criar o módulo administrativo -> ng generate module administrativo --routing
+criar o componente principal do módulo -> ng g c administrativo, este compenente irá agrupar todos os outros componentes
+exportar componente administrativo, no modulo do componente e dentro NgModule, vamos colocá-lo no atributo exports.
+no app.module, que é o principal módulo do nosso projeto, na raiz, no app.module.ts, podemos importar o  modulo administrativo.
+inclui o componente sugestao -> ng g c administrativo/denuncia
+inclui o componente denuncia -> ng g c administrativo/sugestao
+inclui o componente denuncia -> ng g c administrativo/reclamacao
+inclui o componente denuncia -> ng g c administrativo/resultado
+inclui o componente denuncia -> ng g c administrativo/seletor
+aplicar a técnica lazy load, no ‘app.component.html’ vamos utilizar uma diretiva do Angular chamada router outlet. Digitamos <router-outlet></router-outlet>.
+app-routing-module e vamos no nosso array de rotas ...
+no administrativo-routing-module será definida as rotas filhas
+no componenete administrativo colara a tag  <router-outlet></router-outlet>.
+injetar router no componente principal no constructor -> private router: Router
+no administrativo.module, inserir o "import { FormsModule } from '@angular/forms';" para vincular o formModel para componente do moódulo administrativo
+no administrativo.module, no array Imports insira a "FormsModule"
+criar o campo sel no componente seletor, este campo ser usado para rotear os componetes
+no componete sugestão foi tratado um direcionamento para componete resultado com a opçaõ de voltar para o componete principal
 
 ############################################################################################
-
 
 [00:00] Antes de prosseguirmos com a criação das outras interfaces, vamos estruturar as nossas rotas e vamos fazer isso já usando a melhor prática: a técnica do lazy load. Vamos colocar na nossa IDE e no ‘app.component.html’ vamos apagar a declaração direta do nosso componente. Vamos utilizar uma diretiva do Angular chamada router outlet. Digitamos <router-outlet></router-outlet>.
 
