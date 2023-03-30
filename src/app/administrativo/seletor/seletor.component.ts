@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./seletor.component.css']
 })
 export class SeletorComponent implements OnInit {
-  sel: number = 1;
+  sel: number = 0;
 
   constructor(private router: Router) { 
-    this.sel = 1;
+    this.sel = 0;
   }
 
   ngOnInit(): void {
@@ -26,8 +26,10 @@ export class SeletorComponent implements OnInit {
           console.log(this.sel);
           this.router.navigate([ './adm/sugestao']);
         }else{
-          console.log(this.sel);
-          this.router.navigate(['./adm/reclamacao']);
+          if (this.sel == 3){
+            console.log(this.sel);
+            this.router.navigate(['./adm/reclamacao']);
+          }
         }
     }
    }
