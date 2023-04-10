@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { SeletorComponent } from './seletor/seletor.component';
 import { ResultadoComponent } from './resultado/resultado.component';
 
+import {ReactiveFormsModule } from '@angular/forms';
+
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -29,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,

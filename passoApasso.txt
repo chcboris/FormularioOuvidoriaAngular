@@ -25,6 +25,13 @@ no administrativo.module, no array Imports insira a "FormsModule"
 criar o campo sel no componente seletor, este campo ser usado para rotear os componetes
 no componete sugestão foi tratado um direcionamento para componete resultado com a opçaõ de voltar para o componete principal
 
+
+no módulo administrativo inserir os imports do material
+montar a interface do formulario reclamação
+
+
+
+
 ############################################################################################
 
 [00:00] Antes de prosseguirmos com a criação das outras interfaces, vamos estruturar as nossas rotas e vamos fazer isso já usando a melhor prática: a técnica do lazy load. Vamos colocar na nossa IDE e no ‘app.component.html’ vamos apagar a declaração direta do nosso componente. Vamos utilizar uma diretiva do Angular chamada router outlet. Digitamos <router-outlet></router-outlet>.
