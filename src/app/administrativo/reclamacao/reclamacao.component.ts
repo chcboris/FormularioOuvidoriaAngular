@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, NonNullableFormBuilder } from '@angular/forms';
+import { TipoOcorrencia } from 'src/app/shared/enum/tipoOcorrencia';
+import { Ocorrencia } from 'src/app/shared/model/ocorrencia';
 import { Reclamacao } from 'src/app/shared/model/reclamacao';
 
 
@@ -12,6 +14,8 @@ export class ReclamacaoComponent implements OnInit {
 
   reclamacaoForm!: FormGroup;
   reclamacao:Reclamacao ={};
+
+ // tipoOcorencia!: TipoOcorrencia.RECLAMACAO;
 
   constructor(private fb: FormBuilder) { }
 
@@ -38,5 +42,11 @@ export class ReclamacaoComponent implements OnInit {
       ocorrencia: [reclamacao.ocorrencia,[Validators.required]],
 
     })
+  }
+
+  Cadastrar(){
+    let ocorrencia = new Ocorrencia();
+    ocorrencia.tipoOcorrencia = TipoOcorrencia.RECLAMACAO;
+    console.table(ocorrencia);
   }
 }

@@ -1,4 +1,4 @@
-export interface Ocorrencia {
+export class Ocorrencia {
     tipoOcorrencia?: number;
     nomeRG?: string;
     nomeSocial?: string;
