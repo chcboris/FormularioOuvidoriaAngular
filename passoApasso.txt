@@ -27,9 +27,11 @@ no componete sugestão foi tratado um direcionamento para componete resultado co
 
 
 no módulo administrativo inserir os imports do material
-montar a interface do formulario reclamação
-
-
+montar a interface gráfica do formulario reclamação
+gerar o medel reclamacao (interface) em shared\model
+no modulo administrativo importar o ReactiveFormsModule,
+importar no reclamação.ts "import { FormBuilder, Validators, FormGroup } from '@angular/forms';""
+no arquivo html vincular o formulário com os campos do model
 
 
 ############################################################################################

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, NonNullableFormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TipoOcorrencia } from 'src/app/shared/enum/tipoOcorrencia';
 import { Ocorrencia } from 'src/app/shared/model/ocorrencia';
-import { Reclamacao } from 'src/app/shared/model/reclamacao';
-
 
 @Component({
   selector: 'app-reclamacao',
@@ -13,40 +12,38 @@ import { Reclamacao } from 'src/app/shared/model/reclamacao';
 export class ReclamacaoComponent implements OnInit {
 
   reclamacaoForm!: FormGroup;
-  reclamacao:Reclamacao ={};
+  ocorrencia:Ocorrencia ={};
 
- // tipoOcorencia!: TipoOcorrencia.RECLAMACAO;
-
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
-    this.createForm(this.reclamacao);
+    this.createForm(this.ocorrencia);
   }
 
-  createForm(reclamacao: Reclamacao) {
+  createForm(ocorrencia: Ocorrencia) {
     this.reclamacaoForm = this.fb.group({
-      nomeRG: [reclamacao.nomeRG,[Validators.required]],
-      nomeSocial: [reclamacao.nomeSocial],
-      nascimento: [reclamacao.nascimento,[Validators.required]],
-      nomeMae: [reclamacao.nomeMae,[Validators.required]],
-      titulo: [reclamacao.titulo],
-      sexo: [reclamacao.sexo,[Validators.required]],
-      escolaridade: [reclamacao.escolaridade,[Validators.required]],
-      email: [reclamacao.email,[Validators.required]],
-      cep: [reclamacao.cep,[Validators.required]],
-      estado: [reclamacao.estado,[Validators.required]],
-      cidade: [reclamacao.cidade,[Validators.required]],
-      endereco: [reclamacao.endereco,[Validators.required]],
-      bairro: [reclamacao.bairro,[Validators.required]],
-      local: [reclamacao.local,[Validators.required]],
-      ocorrencia: [reclamacao.ocorrencia,[Validators.required]],
-
+      nomeRG: [ocorrencia.nomeRG,[Validators.required]],
+      nomeSocial: [ocorrencia.nomeSocial],
+      nascimento: [ocorrencia.nascimento,[Validators.required]],
+      nomeMae: [ocorrencia.nomeMae,[Validators.required]],
+      titulo: [ocorrencia.titulo],
+      sexo: [ocorrencia.sexo,[Validators.required]],
+      escolaridade: [ocorrencia.escolaridade,[Validators.required]],
+      email: [ocorrencia.email,[Validators.required]],
+      cep: [ocorrencia.cep,[Validators.required]],
+      estado: [ocorrencia.estado,[Validators.required]],
+      cidade: [ocorrencia.cidade,[Validators.required]],
+      endereco: [ocorrencia.endereco,[Validators.required]],
+      bairro: [ocorrencia.bairro,[Validators.required]],
+      local: [ocorrencia.local,[Validators.required]],
+      ocorrencia: [ocorrencia.ocorrencia,[Validators.required]]
     })
   }
 
   Cadastrar(){
-    let ocorrencia = new Ocorrencia();
+    let ocorrencia = this.reclamacaoForm.getRawValue();;
     ocorrencia.tipoOcorrencia = TipoOcorrencia.RECLAMACAO;
     console.table(ocorrencia);
+    this.router.navigate(['adm/resultado',100]);
   }
 }

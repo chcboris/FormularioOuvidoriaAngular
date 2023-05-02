@@ -30,7 +30,7 @@ const routes: Routes = [
         component: ReclamacaoComponent,
       },
       {
-        path: 'resultado',
+        path: 'resultado/:valor',
         component: ResultadoComponent,
       }
     ],

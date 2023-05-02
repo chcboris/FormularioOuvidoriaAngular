@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-resultado',
@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ResultadoComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  userID: any;
 
   ngOnInit(): void {
+    this.userID = this.activatedRoute.snapshot.paramMap.get("valor");
   }
 
   voltar(){
