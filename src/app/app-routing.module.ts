@@ -5,13 +5,16 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'adm',
+    redirectTo: 'lgpd',
   },
   {
     path: 'adm',
     loadChildren: () => import('./administrativo/administrativo.module').then((m) => m.AdministrativoModule),
   },
-  
+  {
+    path: 'lgpd',
+    loadChildren: () => import('./lgpd/lgpd.module').then((l) => l.LgpdModule),
+  },
 ];
 
 @NgModule({

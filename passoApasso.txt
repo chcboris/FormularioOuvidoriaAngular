@@ -34,6 +34,36 @@ importar no reclamação.ts "import { FormBuilder, Validators, FormGroup } from 
 no arquivo html vincular o formulário com os campos do model
 
 
+
+
+
+
+ng generate module lgpd --routing
+criar o componente principal do módulo -> ng g c lgpd
+ng g c lgpd/portabilidade
+ng g c lgpd/eliminacaoDP 
+ng g c lgpd/correcaoDP 
+
+no componenete administrativo colara a tag  <router-outlet></router-outlet>.
+injetar router no componente principal no constructor -> private router: Router
+
+no administrativo.module, inserir o "import { FormsModule } from '@angular/forms';" para vincular o formModel para componente do moódulo administrativo
+no administrativo.module, no array Imports insira a "FormsModule"
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+no app.module, que é o principal módulo do nosso projeto, na raiz, no app.module.ts, podemos importar o  modulo administrativo.
+
+aplicar a técnica lazy load, no ‘app.component.html’ vamos utilizar uma diretiva do Angular chamada router outlet. Digitamos <router-outlet></router-outlet>.
+app-routing-module e vamos no nosso array de rotas ...
+
+criar o campo sel no componente seletor, este campo ser usado para rotear os componetes
+no componete sugestão foi tratado um direcionamento para componete resultado com a opçaõ de voltar para o componete principal
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ############################################################################################
 
 [00:00] Antes de prosseguirmos com a criação das outras interfaces, vamos estruturar as nossas rotas e vamos fazer isso já usando a melhor prática: a técnica do lazy load. Vamos colocar na nossa IDE e no ‘app.component.html’ vamos apagar a declaração direta do nosso componente. Vamos utilizar uma diretiva do Angular chamada router outlet. Digitamos <router-outlet></router-outlet>.

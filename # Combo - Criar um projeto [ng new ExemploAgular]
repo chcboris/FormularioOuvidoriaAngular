@@ -1,0 +1,13 @@
+# Combo - Criar um projeto [ng new ExemploAgular]
+Instalar módulos [npm install]
+testar aplicação [npm start]
+Criar um componente de login [ng g c componente]
+criar um componente de tela a ser usada após o login com sucesso
+no app.modules, inserir o "import { FormsModule } from '@angular/forms';"
+no app.modules, no array Imports insira a "FormsModule"
+criar os campos no arquivo TS
+Vincluar os campos aos componentes através do NGMODEL
+no arquivo app.routting, criar as rotas para todos os componentes (login , acessado e erro) 
+no arquivo principal ts, importar import { Router } from '@angular/router';
+no arquivo principal ts, instanciar o router no construtor private router: Router
+para forcar um roteamento use a linha de comando this.router.navigate(['/nome da rota']);
